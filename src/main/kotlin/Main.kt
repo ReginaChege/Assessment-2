@@ -4,7 +4,8 @@ fun main(){
     println(library.addBooks(1))
     println(library.addBooks(5))
     var morocan=MoroccanRecipe("spicy","boiling",5)
-    morocan.method("frying")
+    var sudanRecipe=MoroccanRecipe.KenyanRecipe.SudanRecipe("spicy","boiling",5)
+
 
 //morocan.method("")
 }
@@ -91,70 +92,68 @@ open class Recipe(var foodType:String, var method:String, var nutritionalValue:I
     }
 
 }
-class MoroccanRecipe(foodType:String,method:String,nutritionalValue:Int):Recipe(foodType,method,nutritionalValue){
-//    var prepare="boiled"
-   override fun cookingMethod(food:String){
-     if (food==food && method==prepare){
-         println("mbeho is a morocan dish")
-     }
-     else{
-         println("it not a morrocan dish")
-     }
- }
-   override fun nutritionLvalue(valu: Int){
-        var value=9
-        if (value>=10 && prepare==prepare){
+class MoroccanRecipe(foodType:String,method:String,nutritionalValue:Int):Recipe(foodType,method,nutritionalValue) {
+    //    var prepare="boiled"
+    override fun cookingMethod(food: String) {
+        if (food == food && method == prepare) {
+            println("mbeho is a morocan dish")
+        } else {
+            println("it not a morrocan dish")
+        }
+    }
+
+    override fun nutritionLvalue(valu: Int) {
+        var value = 9
+        if (value >= 10 && prepare == prepare) {
             println("The food is high in calcium which helps in bones")
 
-        }
-        else{
+        } else {
             println("The food is rich in vitamin c")
         }
     }
 
-    class KenyanRecipe(foodType:String,method:String,nutritionalValue:Int):Recipe(foodType,method,nutritionalValue){
-//        var prepare="boiled"
-        override fun cookingMethod(food:String){
-            if (food==food && method==prepare){
+    class KenyanRecipe(foodType: String, method: String, nutritionalValue: Int) :
+        Recipe(foodType, method, nutritionalValue) {
+        //        var prepare="boiled"
+        override fun cookingMethod(food: String) {
+            if (food == food && method == prepare) {
                 println("uagli is a kenyan dish")
-            }
-            else{
+            } else {
                 println("it not a Kenyan dish")
             }
         }
-        override fun nutritionLvalue(valu: Int){
-            var value=9
-            if (value>=10 && prepare==prepare){
+
+        override fun nutritionLvalue(valu: Int) {
+            var value = 9
+            if (value >= 10 && prepare == prepare) {
                 println("The food is high in calcium which helps in teeth")
 
-            }
-            else{
+            } else {
                 println("The food is rich in vitamin a")
             }
         }
 
-        class SudanRecipe(foodType:String,method:String,nutritionalValue:Int):Recipe(foodType,method,nutritionalValue){
-//            var prepare="boiled"
-            override fun cookingMethod(food:String){
-                if (food==food && method==prepare){
+        class SudanRecipe(foodType: String, method: String, nutritionalValue: Int) :
+            Recipe(foodType, method, nutritionalValue) {
+            //            var prepare="boiled"
+            override fun cookingMethod(food: String) {
+                if (food == food && method == prepare) {
                     println("mbeho is a sudan dish")
-                }
-                else{
+                } else {
                     println("it not a sudan dish")
                 }
             }
-            override fun nutritionLvalue(valu: Int){
-                var value=9
-                if (value>=10 && prepare==prepare){
+
+            override fun nutritionLvalue(valu: Int) {
+                var value = 9
+                if (value >= 10 && prepare == prepare) {
                     println("The food is high in calcium which helps in growing tall")
 
-                }
-                else{
+                } else {
                     println("The food is rich in vitamin d")
                 }
             }
 
-
-
-
         }
+    }
+}
